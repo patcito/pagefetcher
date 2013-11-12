@@ -1,0 +1,18 @@
+<% if @page %>
+  <h1><%= @page.name %></h1>
+  <p><%= image_tag @page.cover_source %></p>
+<% end %>
+  <% @posts["data"].each do |post| %>
+    <div class="media">
+      <a class="pull-left" href="<%= post["link"] %>">
+      <img class="media-object" data-src="holder.js/64x64" 
+      alt="64x64" style="width: 64px; height: 64px;" 
+      src="<%= post['picture'] || @page.cover_source %>">
+    </a>
+        <div class="media-body">
+      <h4 class="media-heading">Media heading</h4>
+       <%= auto_link post["message"]  %>
+    </div>
+  </div>
+  <% end %>
+

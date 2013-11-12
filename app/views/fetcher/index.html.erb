@@ -1,0 +1,7 @@
+<h4>Page Fetcher</h4>
+<%= form_for @page do |f| %>
+  <%= text_field_tag :q, nil, type: :search, placeholder: (current_user)? '': 'Sign in with Facebook first' %>
+<% end %>
+<p>(example: 188091757763)</p>
+
+
